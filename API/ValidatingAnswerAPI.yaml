@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  description: Validates answers
+  version: "1.0.1"
+  title: Answer Vaidation
+paths:
+  /questions:
+    post:
+      summary: Validates user input through comparing to list of correct answers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                answer:
+                  type: string
+    responses:
+	'200':
+	  description: User input received and validated
